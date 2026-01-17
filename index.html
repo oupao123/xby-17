@@ -111,6 +111,24 @@
             color: var(--white);
         }
 
+        /* 新增：联系按钮样式，匹配网站主风格，美观协调 */
+        #contactButton {
+            background: var(--primary-gradient);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-md);
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            margin: 0 10px;
+        }
+        #contactButton:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 18px rgba(15, 81, 50, 0.2);
+        }
+
         /* 导航栏-玻璃态渐变+粘性定位+滚动变色 */
         header {
             position: sticky;
@@ -315,7 +333,7 @@ padding: 30px;
 
         .stock-card {
             background: var(--white);
-            border-radius: var(--radius-md);
+	border-radius: var(--radius-md);
             box-shadow: var(--shadow);
             padding: 25px;
             transition: var(--transition);
@@ -678,6 +696,10 @@ padding: 30px;
                 justify-content: center;
                 padding: 0.9rem 1rem;
             }
+            #contactButton {
+                width: 100%;
+                margin: 10px 0;
+            }
         }
 
         @media (max-width: 576px) {
@@ -715,6 +737,8 @@ padding: 30px;
                     <li><a href="#" class="nav-link">Noticias</a></li>
                     <li><a href="#" class="nav-link">Inversión</a></li>
                 </ul>
+                <!-- ✅ 新增：联系按钮 放在导航栏最右侧，位置显眼 -->
+                <button id="contactButton">联系</button>
             </nav>
         </div>
     </header>
@@ -1009,6 +1033,12 @@ padding: 30px;
                 });
             });
         });
+        
+        // ✅ 新增：联系按钮点击事件脚本 (完整添加，预留insert_event_code_here占位符)
+        document.getElementById('contactButton').addEventListener('click', function() {
+            insert_event_code_here;
+            ...
+        }, false);
     </script>
 </body>
 </html>
